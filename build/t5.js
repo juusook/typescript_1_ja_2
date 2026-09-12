@@ -11,9 +11,12 @@ function lengthOrSquare(value) {
     if (typeof value === 'number') {
         return value ** 2;
     }
+    // If the type is neither string nor number, we cannot process it
+    throw new Error("Input must be a string or a number");
 }
 // Prompt the user to enter a value as either a string or a number
-const userInput = prompt("Enter a value as either a string or a number:");
+// Nullish coaliscing operator (??) for default value to handle null
+const userInput = prompt("Enter a value as either a string or a number:") ?? "";
 const parsedValue = isNaN(Number(userInput)) ? userInput : Number(userInput);
 // Call the lengthOrSquare function
 const result = lengthOrSquare(parsedValue);
