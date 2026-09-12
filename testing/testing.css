@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: beige;
+}
+
+div.flex-parent {
+  background-color: cadetblue;
+  display: flex;
+  gap: 2em 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+p {
+  background-color: rgb(0, 106, 255);
+  padding: 20px;
+  color: aliceblue;
+
+  &:nth-of-type(even) {
+    background-color: rgb(196, 255, 255);
+    color: black;
+  }
+  }
